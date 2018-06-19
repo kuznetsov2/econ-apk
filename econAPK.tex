@@ -1,0 +1,102 @@
+\PassOptionsToPackage{svgnames}{xcolor}
+\documentclass[a4paper,14pt]{article}
+
+\input preamble.tex
+
+\usepackage{sectsty}
+\usepackage{lipsum}
+\usepackage{indentfirst}
+\allsectionsfont{\centering\normalsize} % Заголовки с абзацного отступа
+\subsectionfont{\normalsize\centering} % Подразделы с абзацного отступа + обычный шрифт
+
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\usetikzlibrary{shadings,shadows}
+
+\newenvironment{block1}[1]{%
+	\tcolorbox[beamer,%
+	noparskip,breakable,
+	colback=LightGreen,colframe=DarkGreen,%
+	colbacklower=LimeGreen!75!LightGreen,%
+	title=#1]}%
+{\endtcolorbox}
+
+\newenvironment{block2}[1]{%
+	\tcolorbox[beamer,%
+	noparskip,breakable,
+	colback=LightCoral,colframe=DarkRed,%
+	colbacklower=Tomato!75!LightCoral,%
+	title=#1]}%
+{\endtcolorbox}
+
+\newenvironment{block3}[1]{%
+	\tcolorbox[beamer,%
+	noparskip,breakable,
+	colback=LightBlue,colframe=DarkBlue,%
+	colbacklower=DarkBlue!75!LightBlue,%
+	title=#1]}%
+{\endtcolorbox}
+
+\newenvironment{block}[1]{%
+	\tcolorbox[beamer,%
+	noparskip,breakable,
+	colback=Lavender,colframe=SlateGray,%
+	colbacklower=SlateGray!75!Lavender,%
+	title=#1]}%
+{\endtcolorbox}
+
+
+
+\begin{document}
+
+\input titlist.tex
+\newpage
+%\thispagestyle{empty}
+%\begingroup
+%	\centering{
+		\tableofcontents
+				%}
+%\endgroup
+		
+		%
+		% 17. Классификация рынков, виды аграрных рынков их особенности при свободной конкуренции
+		% 27. Значение зернового производства. Его развитие в России и Пермском крае (посевная площадь, урожайность, валовые сборы)
+		% 49. Значение скотоводства, его развитие в России и Пермском крае (численность подготовки, продуктивность, валовое производство, породный состав)
+\newpage
+\input{glava1}
+
+\newpage
+\input{glava2}
+
+\newpage
+\input{glava3}
+
+\newpage
+\input{glava4}
+
+\newpage
+\input{glava5}
+
+\newpage
+\input{glava6}
+
+\newpage
+\input{glava7}
+
+%\newpage
+%\section{} %\label{}
+%\input{zadanie2}
+
+%\nocite{yushkova,yushkova1}
+
+%\newpage\null\thispagestyle{empty}\newpage %вставка пустой страницы
+\newpage
+\renewcommand\refname{Список использованных источников}
+\printbibliography
+\addcontentsline{toc}{section}{Список использованных источников}
+%\small{\listoftables}
+%\addcontentsline{toc}{section}{Список таблиц}
+%\newpage
+%\section*{{{ПРИЛОЖЕНИЯ}}}
+%\addcontentsline{toc}{section}{Приложения}
+\end{document}
